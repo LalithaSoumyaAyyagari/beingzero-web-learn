@@ -1,6 +1,8 @@
 const express = require('express');
  
 const app = express();
+
+app.use(express.static(__dirname+"/frontend"));
  
 app.get("/", function(req, res){
     res.send("Welcome to Lalitha's Basic Site");
@@ -10,7 +12,7 @@ app.get("/", function(req, res){
 const PORT = process.env.PORT || 3000;
  
 app.get("/resume", function(req, res){
-    let i=__dirname+"/resume.html"
+    let i=__dirname+"/frontend/html/resume.html"
     res.sendFile(i);
 
 });
