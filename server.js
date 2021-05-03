@@ -17,10 +17,16 @@ app.get("/", function(req, res){
 });
  
 app.get("/resume", function(req, res){
-    let i=__dirname+"/frontend/html/resume.html";
+    let i=__dirname + "/frontend/html/resume.html";
     res.sendFile(i);
 
 });
+
+app.get("/google", function(req, res){
+    let i = __dirname + "/frontend/html/googlePage.html";
+    res.sendFile(i);
+});
+
 // Start the server
 app.listen(PORT, function(){
     console.log("Server Starting running on http://localhost:"+PORT);
