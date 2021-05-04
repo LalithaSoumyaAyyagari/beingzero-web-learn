@@ -54,3 +54,25 @@ input:focus{
     font-size: 17px;
    
 }
+
+.foot{
+    position:fixed;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    padding-bottom: 15px;
+    background-color:rgba(247, 241, 241, 0.842);
+
+}
+.foot_left{
+    float: left;
+    padding-left: 25px;
+    padding-top:3px;
+}
+
+.foot_right{
+    float :right;
+    padding-right: 25px;
+    padding-top:3px;
+}
+
