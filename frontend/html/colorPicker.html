@@ -8,15 +8,19 @@
     <title>Color Picker</title>
 </head>
 <body>
+    <fieldset>
+        RGB
+    </fieldset>
+    <br>
     <div class="rangesliders">
-        <input type="range" min="0" max="255" value="255" id="myRange1" name="myRange1">
-        <p>Value: <span id="demo"></span></p>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-        <input type="range" min="0" max="255" value="255" id="myRange2" name="myRange2">
-        <p>Value: <span id="demo"></span></p>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-        <input type="range" min="0" max="255" value="255" id="myRange2" name="myRange3">
-        <p>Value: <span id="demo"></span></p>
+        <pre class="colors">
+            RED    GREEN   BLUE
+        </pre>
+        <div class="sliders">
+            <input type="range" min="0" max="255" value="255" id="myRange1" name="myRange1">
+            <input type="range" min="0" max="255" value="255" id="myRange2" name="myRange2">
+            <input type="range" min="0" max="255" value="255" id="myRange2" name="myRange3">
+        </div>
     </div>
     <script src="/js/colorPicker.js"></script>
     
