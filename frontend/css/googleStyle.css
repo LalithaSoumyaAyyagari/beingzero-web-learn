@@ -44,15 +44,12 @@ input:focus{
     text-align: center;
     padding-top: 30px;
     color: whitesmoke;
-    
-    
 }
 
 #bt1{
     background-color: rgba(245, 245, 245, 0.623);
     border: none;
     font-size: 17px;
-   
 }
 
 .foot{
