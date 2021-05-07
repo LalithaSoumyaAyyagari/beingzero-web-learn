@@ -22,6 +22,12 @@ app.get("/resume", function(req, res){
 
 });
 
+app.get("/home", function(req, res){
+    let i=__dirname + "/frontend/html/home.html";
+    res.sendFile(i);
+
+});
+
 app.get("/google", function(req, res){
     let i = __dirname + "/frontend/html/googlePage.html";
     res.sendFile(i);
