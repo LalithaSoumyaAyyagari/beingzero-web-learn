@@ -1,12 +1,12 @@
-function onColorRangeChange(){
-    let pE = document.getElementById("pcolor");
-    let rE = document.getElementById("redSlider");
-    let gE = document.getElementById("greenSlider");
-    let bE = document.getElementById("blueSlider");
-
-    let rgbprop = "rgb("+rE.value+", "+gE.value+", "+bE.value+")";
-    console.log(rgbprop);
-
-    pE.innerHTML = rgbprop;
-    pE.style.backgroundColor = rgbprop;
+function changeColor() {
+    let red = document.getElementById('rangeRed').value;
+    let green = document.getElementById('rangeGreen').value;
+    let blue = document.getElementById('rangeBlue').value;
+    let color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+    document.getElementsByClassName("sec-1")[0].style.backgroundColor=color
+    document.getElementById('colorOutput').innerHTML = ': ' + color;
 }
+
+document.getElementById('rangeRed').addEventListener('input', changeColor);
+document.getElementById('rangeGreen').addEventListener('input', changeColor);
+document.getElementById('rangeBlue').addEventListener('input', changeColor);

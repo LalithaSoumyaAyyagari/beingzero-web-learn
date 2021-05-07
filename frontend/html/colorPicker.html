@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
     <link rel="stylesheet" href="/css/colorPicker.css">
-    <title>Color Picker</title>
 </head>
 <body>
-    <p id="pColor">Show color here</p>
-    <p><input type="range" oninput="onColorRangeChange()" min="0" max="255" step='2' value="10" id="redSlider">RED</p>
-    <p><input type="range" oninput="onColorRangeChange()" min="0" max="255" step='2' value="10" id="greenSlider">GREEN</p>
-    <p><input type="range" oninput="onColorRangeChange()" min="0" max="255" step='2' value="10" id="blueSlider">BLUE</p>   
-    <script src="/js/colorPicker.js"></script>
+    <div class="sec-1">
+        <h2>Select Color<span id="colorOutput"></span></h2>
+    </div>
+    <div class="sec-2">
+        <label>red:</label> 
+    <input type="range" id="rangeRed" value="4" min="0" max="255">
+
+    <label>green:</label> 
+    <input type="range" id="rangeGreen" value="139" min="0" max="255">
+
+    <label>blue:</label> 
+    <input type="range" id="rangeBlue" value="168" min="0" max="255">
+     </div>   
+    
+     <script src="/js/colorPicker.js"></script>
 </body>
 </html>
