@@ -31,7 +31,20 @@ app.get("/color", function(req, res)
 {
     let i = __dirname + "/frontend/html/colorPicker.html";
     res.sendFile(i);
-})
+});
+
+app.get("/login", function(req, res)
+{
+    let i = __dirname + "/frontend/html/login.html";
+    res.sendFile(i);
+});
+
+app.get("/register", function(req, res)
+{
+    let i = __dirname + "/frontend/html/register.html";
+    res.sendFile(i);
+});
+
 
 // Start the server
 app.listen(PORT, function(){

@@ -1,8 +1,12 @@
-var slider = document.getElementById("myRange1");
-var output = document.getElementById("demo");
-output.innerHTML = slider.nodeValue;
+function onColorRangeChange(){
+    let pE = document.getElementById("pcolor");
+    let rE = document.getElementById("redSlider");
+    let gE = document.getElementById("greenSlider");
+    let bE = document.getElementById("blueSlider");
 
-slider.oninput = function inputval(){
-    output.innerHTML = this.nodeValue;
+    let rgbprop = "rgb("+rE.value+", "+gE.value+", "+bE.value+")";
+    console.log(rgbprop);
 
+    pE.innerHTML = rgbprop;
+    pE.style.backgroundColor = rgbprop;
 }
