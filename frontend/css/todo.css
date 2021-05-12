@@ -70,17 +70,29 @@ button:focus{
   }
 
 .field{
+    margin: auto;
+    width: 25%;
     padding-top: 1%;
+    background-color: rgb(193, 234, 247);
+    border: double rgb(58, 133, 231);
+    border-collapse: collapse;
 }
 
 .c1 i{
     color: green;
-    padding-left: 1%;
+    padding-left: 5%;
+    float:right;
 }
 
 .c2 i{
     color: crimson;
-    padding-left: 1%;
+    padding-left: 5%;
+    float: right;
+}
+
+.matter{
+    float: left;
+    margin-left: 10px;
 }
 
 
