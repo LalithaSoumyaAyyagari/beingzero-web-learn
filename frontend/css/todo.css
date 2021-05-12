@@ -1,0 +1,86 @@
+body{
+    background-image: url("/img/bg.png");
+}
+
+h1{
+    color: rgba(23, 23, 245, 0.76);
+}
+
+.main{
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+}
+
+input{
+    width: 25%;
+    padding: 1%;
+    text-align: center;
+    border-radius: 15px 15px 15px 15px;
+    background-color: lavender;
+    border: 4px double rgb(224, 155, 147);
+
+}
+#task{
+    font-family: 'Libre Baskerville', serif;
+}
+#task:focus{
+    outline: none;
+}
+
+
+button {
+    display: inline-block;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    padding: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button:focus{
+    outline: none;
+}
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  button:hover {
+    background-color: rgb(32, 218, 203);
+  }
+  button:hover span {
+    padding-right: 25px;
+  }
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.field{
+    padding-top: 1%;
+}
+
+.c1 i{
+    color: green;
+    padding-left: 1%;
+}
+
+.c2 i{
+    color: crimson;
+    padding-left: 1%;
+}
+
+

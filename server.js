@@ -51,6 +51,12 @@ app.get("/register", function(req, res)
     res.sendFile(i);
 });
 
+app.get("/todo", function(req, res)
+{
+    let i = __dirname + "/frontend/html/todo.html";
+    res.sendFile(i);
+});
+
 
 // Start the server
 app.listen(PORT, function(){
