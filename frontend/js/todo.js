@@ -17,22 +17,22 @@ function newTask(){
     newCol2.classList.add("c1")
     newCol3.classList.add("c2")
     newCol1.classList.add("matter")
-    //newLine.classList.add("hline")
-
-   /* newCol2.onclick(function(){
-        var c = 0
-        if( c == 0)
-        {
-            c=1
-            document.parentElement.
-        }
-    })*/
-
+    
     newRow.appendChild(newCol1)
     newRow.appendChild(newCol3)
     newRow.appendChild(newCol2)
     newRow.appendChild(newLine)
     newRow.appendChild(newLine1)
+
+    $(newCol2).click(function(){
+         $(this).parent().addClass("checked")
+    
+    })
+
+    $(newCol3).click(function()
+    {
+        $(this).parent().remove()
+    })
     
 
 

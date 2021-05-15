@@ -91,8 +91,20 @@ button:focus{
 }
 
 .matter{
-    float: left;
     margin-left: 10px;
+    float: left;
+    
 }
+
+.checked{
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.checked span{
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
 
 

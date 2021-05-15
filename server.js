@@ -57,7 +57,6 @@ app.get("/todo", function(req, res)
     res.sendFile(i);
 });
 
-
 // Start the server
 app.listen(PORT, function(){
     console.log("Server Starting running on http://localhost:"+PORT);
