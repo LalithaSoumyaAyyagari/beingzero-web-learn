@@ -2,11 +2,18 @@ const express = require('express');
  
 const app = express();
 
+const mongoose = require('mongoose');
+
 app.use(express.static(__dirname+"/frontend"));
+
+var password = process.env.Mongo_atlas_password;
+var connectionString = "mongodb+srv://ALS:"+password+"@cluster0.qnubn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
  
-/*app.get("/", function(req, res){
-    res.send("Welcome to Lalitha's Basic Site");
-});*/
+mongoose.connect(connectionString, {});
+mongoose.connection.on('connected', function(){
+    console.log("Database connected");
+
+});
  
 // Heroku will automatically set an environment variable called PORT
 const PORT = process.env.PORT || 3000;
