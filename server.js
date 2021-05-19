@@ -1,18 +1,35 @@
 const express = require('express');
- 
-const app = express();
-
+const path = require('path') 
 const mongoose = require('mongoose');
+const app = express();
+const bodyParser = require('body-parser')
+const courselib = require('./backend/lib/courseLib');
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use(express.static(__dirname+"/frontend"));
+app.use(express.static(path.join(__dirname+"/frontend")))
 
-var password = process.env.Mongo_atlas_password;
-var connectionString = "mongodb+srv://ALS:"+password+"@cluster0.qnubn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
- 
-mongoose.connect(connectionString, {});
-mongoose.connection.on('connected', function(){
+var password = process.env.Mongo_password;
+//var connectionString = "mongodb+srv://ALS:"+password+"@cluster0.qnubn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+var connectionString = "mongodb+srv://ALS1:"+password+"@cluster0.5w4v1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+//mongoose.connect(connectionString, {useFindAndModify:false});
+mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
+var db=mongoose.connection
+
+db.on('connected', function(){
     console.log("Database connected");
+});
 
+db.on('error', function (error) {
+    console.error('Error in MongoDb connection: ' + error);
+});
+    
+db.on('disconnected', function () {
+    console.log('MongoDB disconnected!');
 });
  
 // Heroku will automatically set an environment variable called PORT
@@ -64,7 +81,24 @@ app.get("/todo", function(req, res)
     res.sendFile(i);
 });
 
+app.get("/crud", function(req, res)
+{
+    let i = __dirname + "/frontend/html/crud.html";
+    res.sendFile(i);
+});
+
+app.get("/crud", courselib.getall);
+app.delete("/crud/:idd", courselib.deleteone);
+app.put("/crud/:idd", courselib.update);
+app.post("/crud",courselib.addnewone);
+
 // Start the server
 app.listen(PORT, function(){
     console.log("Server Starting running on http://localhost:"+PORT);
 });
+
+
+
+
+
+
