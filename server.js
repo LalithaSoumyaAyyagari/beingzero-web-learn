@@ -70,6 +70,12 @@ app.get("/crud", function(req, res)
     res.sendFile(i);
 });
 
+app.get("/game", function(req, res)
+{
+    let i = __dirname + "/frontend/html/game.html";
+    res.sendFile(i);
+});
+
 app.get("/crud", courselib.getall);
 app.delete("/crud/:idd", courselib.deleteone);
 app.put("/crud/:idd", courselib.update);

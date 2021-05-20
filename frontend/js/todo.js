@@ -35,7 +35,6 @@ function newTask(){
     })
     
 
-
     document.getElementById("container").appendChild(newRow)
 
     document.getElementById("task").value = ""

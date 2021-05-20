@@ -1,0 +1,81 @@
+header{
+    background-color: rgb(49, 47, 47);
+    font-family: 'Girassol', cursive;
+    color: whitesmoke;
+    text-align: center;
+    padding: 1%;
+    font-size: xxx-large;
+    top: 0;
+}
+
+body{
+    background-color: white;
+}
+
+.main{
+    font-size: 6em;
+    text-align: center;
+    
+}
+
+#darkmode{
+    font-size: xx-large;
+    float: right;
+    
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 5%;
+    
+}
+table, tr, td {
+    border-collapse: collapse;
+    border: solid 3px rgb(143, 137, 137);
+    
+} 
+td {
+    min-width: 100px;
+    color: #fff;
+    font-size: 2em;
+    height: 35px;
+    width: 150px;
+} 
+td.selected {
+    color: rgb(170, 1, 20);
+    text-align: center;
+}
+
+.generate{
+    text-align: center;
+}
+
+#btn {
+    padding: 6px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(170, 1, 20);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+  }
+  
+#btn{
+    background-color: rgb(170, 1, 20);
+}
+  
+#btn:active {
+    background-color: rgb(170, 1, 20);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    
+}
