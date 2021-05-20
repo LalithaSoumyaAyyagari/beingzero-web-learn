@@ -3,7 +3,9 @@ const path = require('path')
 const mongoose = require('mongoose');
 const app = express();
 const bodyParser = require('body-parser')
-const courselib = require('./backend/lib/courseLib');
+const courselib = require('./backend/lib/courseLib')
+const config = require('./backend/config/config')
+const dbconnectLib = require('./backend/lib/dbConnectLib')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -11,26 +13,7 @@ app.use(express.json());
 app.use(express.static(__dirname+"/frontend"));
 app.use(express.static(path.join(__dirname+"/frontend")))
 
-var password = process.env.Mongo_password;
-//var connectionString = "mongodb+srv://ALS:"+password+"@cluster0.qnubn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
-var connectionString = "mongodb+srv://ALS1:"+password+"@cluster0.5w4v1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
-//mongoose.connect(connectionString, {useFindAndModify:false});
-mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
-var db=mongoose.connection
-
-db.on('connected', function(){
-    console.log("Database connected");
-});
-
-db.on('error', function (error) {
-    console.error('Error in MongoDb connection: ' + error);
-});
-    
-db.on('disconnected', function () {
-    console.log('MongoDB disconnected!');
-});
+dbconnectLib.connect()
  
 // Heroku will automatically set an environment variable called PORT
 const PORT = process.env.PORT || 3000;
